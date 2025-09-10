@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion :D</title>
+   <link rel="stylesheet" href="style.css">
+    <link href="img/ico-blanc.ico" rel="icon"></link>
+</head>
+<body>
+    <div class="menuInicial">
+
+        <div class="IconoPrinc">
+            <a href=""><img width="auto" height="70" src="img/IconGrande.png"> </img></a>
+        </div>
+
+        <div class="selecc"> <!-- aca van las cosas de opciones de menu-->
+            <h2 style="color: rgb(27, 27, 27);">
+                <a href="index.html" class="texesp">Bitacora</a>
+            </h2>
+        </div> 
+
+     </div>
+
+    <!--iniciamos aca eh >:)--> 
+        <div class="general">
+
+            <div class="carrusel">
+                <img src="img/Multilenguaje/1.jpg" class="active">
+                <img src="img/Multilenguaje/2.jpg">
+                <img src="img/Multilenguaje/3.jpg">
+                <img src="img/Multilenguaje/4.jpg">
+                <img src="img/Multilenguaje/5.jpg">
+                <img src="img/Multilenguaje/6.jpg">
+                <img src="img/Multilenguaje/7.jpg">
+                <img src="img/Multilenguaje/8.jpg">
+                <img src="img/Multilenguaje/9.jpg">
+
+                <button class="boton prev" onclick="mover(-1)">❮</button>
+                <button class="boton next" onclick="mover(1)">❯</button>
+             </div>
+
+  <script>
+        let indice = 0;
+        const imagenes = document.querySelectorAll(".carrusel img");
+
+        function mostrarImagen(i) {
+             imagenes.forEach(img => img.classList.remove("active"));
+            imagenes[i].classList.add("active");
+        }
+
+        function mover(n) {
+             indice += n;
+            if (indice < 0) indice = imagenes.length - 1;
+             if (indice >= imagenes.length) indice = 0;
+            mostrarImagen(indice);
+            }
+    </script>
+
+    </div> <!--es el del general xd -->
+    
+    <div class="espacioArriba">
+        <h1> ¿Cuál era el logo de el sitio WordPress?</h1>
+    </div>
+
+    <br>
+ <!--primera pregunta ea-->
+    <center>
+        <img class="carrusel" src="img/Multilenguaje/pre1.jpg"></img>
+    </center>
+
+
+    <div class="espacioArriba">
+        <h1> ¿Cuál era el nombre de este servicio?</h1>
+    </div>
+
+    <br>
+ <!--segunda pregunta ea-->
+    <center>
+        <img class="carrusel" src="img/Multilenguaje/pre2.jpg"></img>
+    </center>
+
+
+    
+    <div class="espacioArriba">
+        <h1> ¿Cuál era el nombre de esta función?</h1>
+    </div>
+
+    <br>
+ <!--segunda pregunta ea-->
+    <center>
+        <img class="carrusel" src="img/Multilenguaje/pre3.jpg"></img>
+    </center>
+
+
+</body>
+</html>
